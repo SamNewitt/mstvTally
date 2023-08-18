@@ -37,7 +37,7 @@ try:
                 time.sleep(0.33)
             else:
                 time.sleep(3)
-            print("loop")
+            
             
             
     wlan.connect("ATT-WIFI-Mj4x", password.pw)
@@ -63,7 +63,6 @@ try:
             elif "GET /off" in request:
                 light.value(0)
                 client.sendall('HTTP/1.1 200 OK\nContent-Type: text/html\n\n' + "CAM1 OFF")
-                print("off")
             elif "GET /favico" in request:
                 client.sendall("HTTP/1.1 404")
         except Exception as e:
